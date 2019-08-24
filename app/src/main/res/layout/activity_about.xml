@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.about.AboutActivity" android:background="@drawable/backgroud">
+
+    <TextView
+            android:text="@string/label_about"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvAboutSub"
+            app:layout_constraintTop_toBottomOf="@+id/tvPlayerInfo3"
+            style="@style/subtitle_game_wizard" android:textAlignment="viewStart"
+            app:layout_constraintStart_toStartOf="@+id/tvPlayerInfo3"
+            app:layout_constraintEnd_toEndOf="@+id/tvPlayerInfo3" android:layout_marginTop="12dp"/>
+    <TextView
+            android:text="dolor sit amet, mea ad ignota assentior, eligendi deseruisse ad duo. Harum utamur mea ne, ad his aeque saperet, vix ea tamquam euripidis. Eam admodum similique ad, iisque posidonium repudiandae an pro. Mollis quaestio constituam duo an, an sit dico alienum intellegebat.  Amet laoreet definitiones et mea, augue petentium nam eu, te pri eruditi denique repudiare. Ei eos possim verterem. Prima soleat ancillae eu cum, enim verear scripta vel ut. Pri adhuc veniam et. Libris aperiri pericula nam ei, mea te duis dicant, omnis accumsan ea sea. Modo pericula qui no.  Suscipit posidonium inciderint his in, nec veri exerci alterum ex. Vel no quod vitae nostro. Eam no dolor tincidunt, consul suscipit scaevola vim id. Pro ut assentior referrentur, no ius quis postulant. "
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/tvAboutText"
+            style="@style/text_common" android:textAlignment="viewStart"
+            app:layout_constraintStart_toStartOf="@+id/tvPlayerInfo3"
+            app:layout_constraintEnd_toEndOf="@+id/tvPlayerInfo3"
+            app:layout_constraintHorizontal_bias="1.0" android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvAboutSub" android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    <TextView
+            android:text="@string/app_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvPlayerInfo3"
+            app:layout_constraintTop_toBottomOf="@+id/ivBackAbout" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="32dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="32dp"
+            style="@style/title_game_wizard" android:textAlignment="viewStart" android:layout_marginTop="16dp"/>
+    <ImageView
+            android:id="@+id/ivBackAbout"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:layout_marginTop="16dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
