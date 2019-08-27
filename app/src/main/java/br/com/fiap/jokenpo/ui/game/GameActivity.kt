@@ -3,6 +3,7 @@ package br.com.fiap.jokenpo.ui.game
 import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -24,8 +25,12 @@ class GameActivity : AppCompatActivity() {
         registerObserver()
 
         ivPapelPlay.setOnClickListener {
-            ivPlayerPlay.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.papel))
-            gameViewModel.play(0)
+
+            Handler().postDelayed({
+                ivPlayerPlay.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.papel))
+                gameViewModel.play(0)
+            }, 2000)
+
         }
 
         ivPedraPlay.setOnClickListener {
@@ -47,6 +52,25 @@ class GameActivity : AppCompatActivity() {
 
         gameViewModel.androidPoints.observe(this, Observer {
             tvAndroidResult.text = it.toString()
+        })
+
+        gameViewModel.partialResult.observe(this, Observer {
+            when (it.toInt()) {
+                0 -> {
+                    tvWhoWin.text = tvPlayerName.text.toString() + " is the Champion"
+                }
+                1 -> {
+                    tvWhoWin.text = "Android is the Champion!"
+                }
+            }
+        })
+
+        gameViewModel.partialResult.observe(this, Observer {
+            when (it.toInt()) {
+                0 -> tvWhoWin.text = tvPlayerName.text.toString() + " Win!"
+                1 -> tvWhoWin.text = "Android Win!"
+                2 -> tvWhoWin.text = "It's a Draw"
+            }
         })
 
         gameViewModel.androidPlay.observe(this, Observer {
