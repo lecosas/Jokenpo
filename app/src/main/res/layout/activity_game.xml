@@ -97,4 +97,5 @@
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintBottom_toTopOf="@+id/ivPedraPlay" android:layout_marginBottom="16dp"
             style="@style/sub_text"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
